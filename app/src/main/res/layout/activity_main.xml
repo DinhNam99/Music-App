@@ -1,0 +1,86 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_marginBottom="50dp"
+        sothree:umanoPanelHeight="50dp"
+        sothree:umanoShadowHeight="4dp"
+        sothree:umanoParallaxOffset="100dp"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoOverlay="true"
+        sothree:umanoScrollableView="@+id/list">
+
+        <!-- MAIN CONTENT -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.Toolbar
+                xmlns:sothree="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/main_toolbar"
+                android:layout_height="70dp"
+                android:background="#fff"
+                android:layout_width="match_parent">
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <LinearLayout
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"/>
+
+                    <EditText
+                        android:layout_marginRight="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:hint="Search for songs"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/edSearch"
+                        android:textColorHint="#8A8383"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_alignParentBottom="true"
+                        android:focusable="false"
+                        android:drawableLeft="@android:drawable/ic_menu_search"
+                        />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+            <FrameLayout
+                android:layout_marginTop="75dp"
+                android:id="@+id/frame_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </FrameLayout>
+        <include layout="@layout/content_main"/>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/colorbottom"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary"
+        app:menu="@menu/bottom_menu" />
+</android.support.design.widget.CoordinatorLayout>

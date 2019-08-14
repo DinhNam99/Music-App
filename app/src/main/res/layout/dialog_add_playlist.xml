@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="#fff"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginTop="22dp"
+        android:hint="Enter name"
+        android:id="@+id/edName"
+        android:textSize="20dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Ok"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:id="@+id/btnOK"
+            android:background="#fff"
+            />
+        <Button
+            android:layout_width="150dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="50dp"
+            android:layout_marginLeft="85dp"
+            android:text="Cancle"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:id="@+id/btnCancle"
+            android:background="#fff"
+            />
+    </RelativeLayout>
+</LinearLayout>

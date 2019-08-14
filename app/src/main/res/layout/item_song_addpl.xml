@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padd_10">
+
+        <ImageView
+            android:src="@drawable/background"
+            android:id="@+id/thumbnail_addpl"
+            android:layout_width="@dimen/thumbnail"
+            android:layout_height="@dimen/thumbnail"
+            android:layout_marginEnd="@dimen/activity_padding_horizontal"
+            android:scaleType="fitXY"
+            android:layout_marginRight="@dimen/activity_padding_horizontal" />
+
+
+        <TextView
+            android:text="Dynasty"
+            android:id="@+id/song_title_item_addpl"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumbnail_addpl"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textColor="@color/item_name"
+            android:textSize="@dimen/sp_14"/>
+
+        <TextView
+            android:text="Elephante"
+            android:id="@+id/song_artist_item_addpl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/song_title_item_addpl"
+            android:layout_toRightOf="@id/thumbnail_addpl"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/description"
+            android:textSize="@dimen/sp_12"/>
+
+    </RelativeLayout>
+    <CheckBox
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:id="@+id/checkbox_add"
+        />
+</RelativeLayout>
